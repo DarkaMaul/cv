@@ -302,7 +302,7 @@
 	 \par{
 	 	 \bigskip\center{\Large \color{accentcolor}\textbf{#1}\color{Black}}\par
 	 }
-	 \bigskip
+	 %\medskip
   }{
     \color{accentcolor}\textbf{\large{#1}}\color{black}
   }
@@ -350,6 +350,7 @@
       \end{minipage}
     }{}
     \resumetitle{\@tagline}
+    
   }{
     \ifundef{\@photodiameter}{
       \begin{minipage}{\linewidth}
@@ -366,7 +367,7 @@
         \idphoto
       \end{minipage}
     }{}
-    \bigskip
+    \medskip
   }
 }
 
@@ -448,7 +449,7 @@
   \textbf{#5}    & \begin{minipage}[t]{\rightcolumnlength}
   					         #6
                    \end{minipage}										\\*
-                 & \footnotesize{\foreach \n in {#7}{\cvtag{\n}}} 	\\
+                 & \rule{0pt}{15pt}{\footnotesize{\foreach \n in {#7}{\cvtag{\n}}}} 	\\
   }
 
 % Render a consultant experience in the experiences environment
