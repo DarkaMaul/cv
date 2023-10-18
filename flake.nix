@@ -1,14 +1,14 @@
 {
   description = "DM CV";
+
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    # flake-utils.url = "github:numtide/flake-utils";
   };
 
   outputs = { self, nixpkgs }:
   let
     system = "x86_64-linux";
-    pkgs = nixpkgs.legacyPackages.${system};
+    pkgs = import nixpkgs { inherit system; };
   in
   {
     packages.${system}.default = pkgs.stdenvNoCC.mkDerivation {
